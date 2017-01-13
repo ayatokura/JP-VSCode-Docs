@@ -40,9 +40,9 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 * **[Node.js Debugging](#node-debugging)** - Just My Code、ファイルから環境変数を読み込み、sourcemap のヘルプ
 * **[Extension Authoring](#extension-authoring)** - 厳密な Null チェック、スニペット補完、デバッガ拡張機能の更新
 
-## ワークベンチ (Workbench)
+## <a name="workbench"> ワークベンチ (Workbench)
 
-### Hot Exit
+### <a name="hot-exit"> Hot Exit
 
 VS Code は、終了時に未保存のファイルの変更も記憶するようになり、これは `Hot Exit` と呼ばれる機能があらたに追加されました。Hot Exit が有効になるのは次のような時です:
 - すべてのウィンドウ (インスタンス) が閉じられたとき
@@ -72,7 +72,7 @@ Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーが表示さ�
 
 macOS 版の VS Code では、テーマのカラーをタイトルバーにも反映できるように、独自のカスタムタイトルバーを内部的に生成するようになりました。この動作は、新しい`window.titleBarStyle` 設定で変更することができ、デフォルトは `custom` が設定されていますが、値を `native` に設定し再起動することで従来と同じタイトルバーに変更することができます。
 
-## コードに集中するための機能 (Focus on your code)
+## <a name="focus-on-your-code"> コードに集中するための機能 (Focus on your code)
 
 このリリースでは、コーディングに集中するために役立つ機能を追加しました。
 
@@ -107,7 +107,7 @@ macOS 版の VS Code では、テーマのカラーをタイトルバーにも�
 
 タブ上の閉じるボタンを非表示にする `workbench.editor.showTabCloseButton` 設定を新たに追加しました。 ダーティー・インジケータ (まだ、ファイルに保存されていないエディタを現すインジケータ)は同一の場所に表示されますが、使用中のタブをマウス操作により誤って閉じることはなくなります。
 
-## 設定 (Settings)
+## <a name="settings"> 設定 (Settings)
 
 VS Code のカスタマイズモデルは、`settings.json` ファイルを編集する形式となり、非常に簡単な操作で動作を設定することが可能です。 ユーザーが使用可能な設定を見つけるために、**Default Settings** を別のエディターで表示し、グローバルまたはワークスペース設定をもう一つのエディタで開き、IntelliSense による設定の追加を提供してきました。しかしながら、ユーザーからのフィードバックとユーザビリティの調査から、このような設定方法には、まだ、問題を抱えていることがわかりました。今回のリリースでは、設定を変更するために、設定項目を探す方法の可能性とユーザーエクスペリエンスを向上させるためのいくつかの調査を行った結果、次のような改善が実施しました。
 
@@ -136,7 +136,7 @@ VS Code のカスタマイズモデルは、`settings.json` ファイルを編�
 
 エディタには様々な改善が続けられて行きます...次のリリース計画に注目してくださいね
 
-## キーボードショートカット (Keyboard shortcuts)
+## <a name="keyboard-shortcuts"> キーボードショートカット (Keyboard shortcuts)
 
 ### キーバインディングコマンドの引数 (Key binding command arguments)
 
@@ -159,15 +159,15 @@ VS Code のカスタマイズモデルは、`settings.json` ファイルを編�
 
 ![Recommended keymap extensions](https://code.visualstudio.com/images/1_8_recommended-keymap-extensions.png)
 
-## エディタ (Editor)
+## <a name="editor"> エディタ (Editor)
 
-### 選択範囲メニューの追加 (Selection menu)
+### <a name="selection-menu"> 選択範囲メニューの追加 (Selection menu)
 
 メニューバーに "選択範囲" メニューを追加し、良く利用される選択操作と複数選択操作に容易にアクセスできるようにしました。
 
 ![Selection menu](https://code.visualstudio.com/images/1_8_selection-menu.png)
 
-### テキスト検索のパフォーマンス向上 (Text search performance)
+### <a name="text-search-performance"> テキスト検索のパフォーマンス向上 (Text search performance)
 
 複数のプロセスで検索コードを並行して実行することにより、フルテキスト検索の[パフォーマンス](https://github.com/Microsoft/vscode/issues/15384)を向上させました。 特に大規模なワークスペースでは、検索がより高速に完了するはずです。
 
@@ -206,7 +206,7 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 
 これらのコマンドは、デフォルトではキーボードショートカットにバインドされていませんが、**Command Palette** から呼び出すことも可能です。
 
-## スニペット (Snippets)
+## <a name="snippets"> スニペット (Snippets)
 
 ### スニペット変数 (Snippet Variables)
 
@@ -237,9 +237,9 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュメントの検証と補完を行います。JSON スキーマにおける VS Code 固有の拡張機能として、より利便性を向上させるためにスキーマにスニペットの提案を指定できるようになりました。スニペットの提案は追加の補完提案として表示され、スニペット構文を使用してプレースホルダを指定します。
 詳細については、[JSON ドキュメント](https://code.visualstudio.com/docs/languages/json#_json-schemas-settings)を参照してください。
 
-## Languages
+## <a name="language"> Languages
 
-### HTML での JavaScript 言語サポート (JavaScript language support in HTML)
+### <a name="javascript-language-support-in-html"> HTML での JavaScript 言語サポート (JavaScript language support in HTML)
 
 HTML に埋め込まれた JavaScript のコーディング支援機能が復活しました！コード補完、DOM の署名ヘルプ、JQuery API、検証、ホバー、参照の検索と定義への移動、シンボルの強調表示と概要 (Ctrl + Shift + o)、フォーマットなどの機能を利用できます。この言語サポートは同じファイル内の定義のみに有効なことに注意してください。
 
@@ -253,11 +253,11 @@ CSS 言語サポートでは、新しい [@apply ルール](https://tabatkins.gi
 
 ![CSS in HTML attributes](https://code.visualstudio.com/images/1_8_css-in-html.png)
 
-### TypeScript Update
+### <a name="typescript-update"> TypeScript Update
 
 JavaScript と TypeScript 言語サポートに [TypeScript 2.1](https://blogs.msdn.microsoft.com/typescript/2016/12/07/announcing-typescript-2-1/) を採用しています。 TypeScript 2.1 は、多くの新しい言語機能とツーリング機能を提供しています。詳細は、[TypeScript 2.1 の新機能について](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#typescript-21)を参照してください。
 
-### JavaScript 
+### <a name="javascript"> JavaScript 
 
 VS Code における JavaScript サポートは TypeScript によって強化されています。また、VS Code には最新の TypeScript バージョンがバンドルされ、JavaScript サポートのためのいくつかの改良が施されています:
 
@@ -290,9 +290,9 @@ vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/201
 - 検証を有効にするには、追加のプラグインを使用して ESLint を設定する必要があります。たとえば、HTML ファイルを検証するには、まず、`npm install eslint-plugin-html` を実行し、`eslint-plugin-html` インストールします。その後、eslint 設定ファイル (.eslintrc.jsonファイル) に `"plugin": [ "html" ]` を追加します
 - さらに、対応する言語識別子を `"eslint.validate": [ "javascript", "javascriptreact", "html" ]` のように `eslint.validate` 設定に追加します。この設定がされない場合のデフォルト値は `["javascript", "javascriptreact"]` となります。
 
-## デバッグ (Debugging)
+## <a name="debugging"> デバッグ (Debugging)
 
-### マルチターゲットデバッグ (Multitarget debugging)
+### <a name="multitarget-debugging"> マルチターゲットデバッグ (Multitarget debugging)
 
 マルチターゲットデバッグは、以前のマイルストーンで実装されました。今回のマイルストーンでは、新たにユーザーインターフェイスを追加し、マルチターゲットデバッグはもはや実験的な機能ではなくなりました。
 
@@ -360,7 +360,7 @@ BREAKPOINTS ビューに表示されるソースと行番号情報は、CALL STA
 
 ![Breakpoints](https://code.visualstudio.com/images/1_8_breakpoints.png)
 
-## Node.js のデバッグ (Node Debugging)
+## <a name="node-debugging"> Node.js のデバッグ (Node Debugging)
 
 このセクションでは、VS Code に組み込まれている 2つの Node.js デバッガである `node` および `node2` の機能について説明します。これら 2 つのデバッガで同等の機能を維持しようと試みていますが、新しいテクノロジ (_Chrome Debugger Protocol_) が急速に進化するのに対して、`node` (_V8 Debugger Protocol_)の技術が非推奨(事実上、開発が凍結)となったため、ますます難しくなっています。このような理由から、我々は、各機能のヘッダの括弧内にサポートされているデバッガのタイプをリストします。
 
@@ -451,7 +451,7 @@ Node.js アプリケーションをデバッグすると、"Source map problem?"
 
 ![Reverse Continue](https://code.visualstudio.com/images/1_8_reverse-continue.png)
 
-## 拡張機能のオーサリング (Extension Authoring)
+## <a name="extension-authoring"> 拡張機能のオーサリング (Extension Authoring)
 
 ### 厳密な Null チェックサポート (Strict Null Checks supported)
 
