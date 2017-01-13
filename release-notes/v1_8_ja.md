@@ -20,7 +20,7 @@ Visual Studio Code 11 月リリース版へようこそ。 このリリースで
 
 * **[Hot Exit](#hot-exit)** - 未保存のファイル変更を失うことが無くなりました
 * **[Focus on Your Code](#focus-on-your-code)** - 禅モード、設定可能なアクティビティバーなどの機能強化
-* **[Settings improvements](#settings)** - VS Code を設定するための新しい設定画面
+* **[Settings improvements](#settings-improvements)** - VS Code を設定するための新しい設定画面
 * **[New Selection menu](#selection-menu)** - エディタ上での選択コマンドをメニューに配置
 * **[Faster Text Search ](#text-search-performance)** - プロジェクトの規模に関わらず、より高速にコードを検索可能に
 * **[Snippet authoring](#snippets)** - コードスニペットで変数を使用可能に
@@ -59,7 +59,7 @@ Hot Exit 後に VS Code を次に起動すると、バックアップされた�
 
 Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーが表示されます。 Linux では、必要に応じてキーバインドを再割り当てする必要があります(Linux 上で `kbstyle(Ctrl+Q)` がアプリケーションの終了などに割り当てられている可能性がある場合） `kbstyle(Ctrl+Q)` を押し、`kbstyle(Ctrl)` キーを押したままにし、`kbstyle(Q)` を押すと、リストから項目にジャンプし、キーを離した後に選択したビューを開くことができます。
 
-### 統合ターミナルの改善 (Terminal improvements)
+### <a name="settings-improvements"> 統合ターミナルの改善 (Terminal improvements)
 
 統合ターミナルにいくつかの改良が行われました:
 
