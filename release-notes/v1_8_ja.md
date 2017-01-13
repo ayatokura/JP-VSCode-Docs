@@ -237,7 +237,7 @@ Sublime Text ユーザーがよく利用する 4 つの新しいコマンドを�
 JSON 言語サービスでは、JSON スキーマを使用して JSON ドキュメントの検証と補完を行います。JSON スキーマにおける VS Code 固有の拡張機能として、より利便性を向上させるためにスキーマにスニペットの提案を指定できるようになりました。スニペットの提案は追加の補完提案として表示され、スニペット構文を使用してプレースホルダを指定します。
 詳細については、[JSON ドキュメント](https://code.visualstudio.com/docs/languages/json#_json-schemas-settings)を参照してください。
 
-## <a name="language"> Languages
+## <a name="languages"> Languages
 
 ### <a name="javascript-language-support-in-html"> HTML での JavaScript 言語サポート (JavaScript language support in HTML)
 
