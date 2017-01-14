@@ -11,7 +11,7 @@
 * Removed 'Focus Default Settings' command from Command Palette ([#17468](https://github.com/Microsoft/vscode/issues/17468))
 
 VS Code は自動的に 1.8.1 にアップデートされますが、以下のリンクから直接リリースをダウンロードすることも可能です:
- 
+
 Downloads: [Windows](https://vscode-update.azurewebsites.net/1.8.1/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.8.1/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-ia32/stable)
 
 ## 11 月リリース版の概要 (November Release Summary)
@@ -47,7 +47,7 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 VS Code は、終了時に未保存のファイルの変更も記憶するようになり、これは `Hot Exit` と呼ばれる機能があらたに追加されました。Hot Exit が有効になるのは次のような時です:
 - すべてのウィンドウ (インスタンス) が閉じられたとき
 - Mac 上で、アプリケーションを終了したとき
-- ウィンドウの再読込 (Reload Windows) 。これで、拡張機能をリロードするための保存が不要になります！
+- ウィンドウの再読込 (Reload Windows) これで、拡張機能をリロードするための保存が不要になります！
 
 Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) にかかわらず、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
 
@@ -91,7 +91,7 @@ macOS 版の VS Code では、テーマのカラーをタイトルバーにも�
 ![Scalable Activity Bar](https://code.visualstudio.com/images/1_8_viewlet.gif)
 
 
-また、VS Code のウィンドウサイズが極端に小さくなり、すべてのビューアイコンを表示するスペースを確保できないような場合は、新しいオーバーフローメニューが自動で追加され、表示できないビューはドロップダウンに表示されるようになります: 
+また、VS Code のウィンドウサイズが極端に小さくなり、すべてのビューアイコンを表示するスペースを確保できないような場合は、新しいオーバーフローメニューが自動で追加され、表示できないビューはドロップダウンに表示されるようになります:
 
 ![Scalable Activity Bar](https://code.visualstudio.com/images/1_8_overflow.png)
 
@@ -257,7 +257,7 @@ CSS 言語サポートでは、新しい [@apply ルール](https://tabatkins.gi
 
 JavaScript と TypeScript 言語サポートに [TypeScript 2.1](https://blogs.msdn.microsoft.com/typescript/2016/12/07/announcing-typescript-2-1/) を採用しています。 TypeScript 2.1 は、多くの新しい言語機能とツーリング機能を提供しています。詳細は、[TypeScript 2.1 の新機能について](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#typescript-21)を参照してください。
 
-### JavaScript 
+### JavaScript
 
 VS Code における JavaScript サポートは TypeScript によって強化されています。また、VS Code には最新の TypeScript バージョンがバンドルされ、JavaScript サポートのためのいくつかの改良が施されています:
 
@@ -373,7 +373,7 @@ Node.js バージョンが 6.3 より古い場合は、`古い`デバッガで�
 ステップ実行したくないコードを回避するための機能が追加されました。これは、Visual Studio でも提供される [Just My Code](https://msdn.microsoft.com/ja-jp/library/dn457346.aspx) に良く似た機能です。
 この機能は、起動設定の `skipFiles` 設定で有効にすることができ、`skipFiles` はスキップするスクリプトパスのグロブパターン配列を設定します。
 
-使用例: 
+使用例:
 
 ```typescript
   "skipFiles": [
@@ -420,7 +420,7 @@ VS Code の Node デバッガは、ファイルから環境変数をロードし
 
 `env` ディクショナリで指定された環境変数は、ファイルからロードされた変数を上書きします。
 
-'.env'ファイルの例は次のようになります: 
+'.env'ファイルの例は次のようになります:
 
 ```yaml
 USER=doe
