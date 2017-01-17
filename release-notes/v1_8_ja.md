@@ -66,7 +66,7 @@ Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーが表示さ�
 - Windows におけるターミナル上でのコピーと貼り付けのキーバインディングは、それぞれ `kbstyle(Ctrl+C)`（テキストが選択されている場合）および `kbstyle(Ctrl+V)` に変更されました
 - スクロールアップさせている際、ターミナルが出力を受け取っても最下部にスクロールしなくなりました
 - ターミナルがフォーカスを持っている場合、`kbstyle(Cmd+K)` によりターミナルをクリアできるようになりました
-- 新しい `terminal.integrated.scrollback` 設定により、ターミナル上でスクロールバック可能な行数を変更することが可能になりまた
+- 新しい `terminal.integrated.scrollback` 設定により、ターミナル上でスクロールバック可能な行数を変更することが可能になりました
 
 ### Mac: タイトルバーにもテーマを反映 (Mac: Custom themed title)
 
