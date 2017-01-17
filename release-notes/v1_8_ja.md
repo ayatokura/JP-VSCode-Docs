@@ -11,7 +11,7 @@
 * Removed 'Focus Default Settings' command from Command Palette ([#17468](https://github.com/Microsoft/vscode/issues/17468))
 
 VS Code は自動的に 1.8.1 にアップデートされますが、以下のリンクから直接リリースをダウンロードすることも可能です:
- 
+
 Downloads: [Windows](https://vscode-update.azurewebsites.net/1.8.1/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.8.1/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-ia32/stable)
 
 ## 11 月リリース版の概要 (November Release Summary)
@@ -47,13 +47,13 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 VS Code は、終了時に未保存のファイルの変更も記憶するようになり、これは `Hot Exit` と呼ばれる機能があらたに追加されました。Hot Exit が有効になるのは次のような時です:
 - すべてのウィンドウ (インスタンス) が閉じられたとき
 - Mac 上で、アプリケーションを終了したとき
-- ウィンドウの再読込 (Reload Windows) 。これで、拡張機能をリロードするための保存が不要になります！
+- ウィンドウの再読込 (Reload Windows) これで、拡張機能をリロードするための保存が不要になります！
 
 Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) にかかわらず、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
 
 ### ビュー・ピッカー (View Picker)
 
-ビュー、パネル、出力チャンネル、およびターミナルを表示するための新しいピッカーが追加され、隠れいているビューを簡単に開くことができるようになりました。**Open View** コマンドを使用するか、**Quick Open** 上でに `view` を入力したあとに `space` (単語ではなく空白のスペース)を入力することで開くことができます。
+ビュー、パネル、出力チャンネル、およびターミナルを表示するための新しいピッカーが追加され、隠れているビューを簡単に開くことができるようになりました。**Open View** コマンドを使用するか、**Quick Open** 上で `view` を入力したあとに `space` (単語ではなく空白のスペース)を入力することで開くことができます。
 
 ![View Picker](https://code.visualstudio.com/images/1_8_view-picker.png)
 
@@ -66,7 +66,7 @@ Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーが表示さ�
 - Windows におけるターミナル上でのコピーと貼り付けのキーバインディングは、それぞれ `kbstyle(Ctrl+C)`（テキストが選択されている場合）および `kbstyle(Ctrl+V)` に変更されました
 - スクロールアップさせている際、ターミナルが出力を受け取っても最下部にスクロールしなくなりました
 - ターミナルがフォーカスを持っている場合、`kbstyle(Cmd+K)` によりターミナルをクリアできるようになりました
-- 新しい `terminal.integrated.scrollback` 設定により、ターミナル上でスクロールバック可能な行数を変更することが可能になりまた
+- 新しい `terminal.integrated.scrollback` 設定により、ターミナル上でスクロールバック可能な行数を変更することが可能になりました
 
 ### Mac: タイトルバーにもテーマを反映 (Mac: Custom themed title)
 
@@ -82,16 +82,16 @@ macOS 版の VS Code では、テーマのカラーをタイトルバーにも�
 
 ### 設定可能なアクティビティバー (Configurable Activity Bar)
 
-左側に配置されるアクティビティバーは、VS Code で提供されているすべてのビューへアクセスするためのホーム(ファイルエクスプローラ、検索、デバッグなど)となり、多くのユーザーは、ビューを素早く切り替えたり、ビューに関する情報を表示するために使用しています。 (例えば、Git ビューアイコンには push で送信されるファイル数がバッジとして表示されます)
+左側に配置されるアクティビティバーは、VS Code で提供されているすべてのビューへアクセスするためのホーム(ファイルエクスプローラ、検索、デバッグなど)となり、多くのユーザーは、ビューを素早く切り替えたり、ビューに関する情報を表示したりするために使用しています。 (例えば、Git ビューアイコンには push で送信されるファイル数がバッジとして表示されます)
 
-今回のリリースでは、アクティビティバーにいくつかの新機能を追加しました。まず、アイコンをドラッグアンドドロップすることでビューを並べ替えることが可能になり、並び順は、VS Code の再起後も保持されます。更に、アクティビティバーそのものを隠したり、特定のビューに提供されるコンテキストメニューを使用して、アクティビティバー上からビューアイコンを削除することも可能です。
+今回のリリースでは、アクティビティバーにいくつかの新機能を追加しました。まず、アイコンをドラッグアンドドロップすることでビューを並べ替えることが可能になり、並び順は、VS Code の再起後も保持されます。更に、アクティビティバーそのものを隠したり、特定のビューに提供されるコンテキストメニューを使用したりして、アクティビティバー上からビューアイコンを削除することも可能です。
 
 アクティビティバーから削除されたビューが開かれるとアクティビティバー上にビューアイコンが表示されますが、別のビューに切り替えるとそのアイコンの表示はされなくなります。これは、アプリケーションドックのような、一般的な機能の動作に似ており、アプリケーションを停止するとアプリケーションアイコンが表示されなくなり、アプリケーションを常に表示または固定解除するようピン留めする機能に似ています。
 
 ![Scalable Activity Bar](https://code.visualstudio.com/images/1_8_viewlet.gif)
 
 
-また、VS Code のウィンドウサイズが極端に小さくなり、すべてのビューアイコンを表示するスペースを確保できないような場合は、新しいオーバーフローメニューが自動で追加され、表示できないビューはドロップダウンに表示されるようになります: 
+また、VS Code のウィンドウサイズが極端に小さくなり、すべてのビューアイコンを表示するスペースを確保できないような場合は、新しいオーバーフローメニューが自動で追加され、表示できないビューはドロップダウンに表示されるようになります:
 
 ![Scalable Activity Bar](https://code.visualstudio.com/images/1_8_overflow.png)
 
@@ -109,7 +109,7 @@ macOS 版の VS Code では、テーマのカラーをタイトルバーにも�
 
 ## 設定 (Settings)
 
-VS Code のカスタマイズモデルは、`settings.json` ファイルを編集する形式となり、非常に簡単な操作で動作を設定することが可能です。 ユーザーが使用可能な設定を見つけるために、**Default Settings** を別のエディターで表示し、グローバルまたはワークスペース設定をもう一つのエディタで開き、IntelliSense による設定の追加を提供してきました。しかしながら、ユーザーからのフィードバックとユーザビリティの調査から、このような設定方法には、まだ、問題を抱えていることがわかりました。今回のリリースでは、設定を変更するために、設定項目を探す方法の可能性とユーザーエクスペリエンスを向上させるためのいくつかの調査を行った結果、次のような改善が実施しました。
+VS Code のカスタマイズモデルは、`settings.json` ファイルを編集する形式となり、非常に簡単な操作で動作を設定することが可能です。 ユーザーが使用可能な設定を見つけるために、**Default Settings** を別のエディタで表示し、グローバルまたはワークスペース設定をもう一つのエディタで開き、IntelliSense による設定の追加を提供してきました。しかしながら、ユーザーからのフィードバックとユーザビリティの調査から、このような設定方法には、まだ、問題を抱えていることがわかりました。今回のリリースでは、設定を変更するために、設定項目を探す方法の可能性とユーザーエクスペリエンスを向上させるためのいくつかの調査を行った結果、次のような改善が実施しました。
 
 ### 設定の検索 (Search settings)
 
@@ -132,7 +132,7 @@ VS Code のカスタマイズモデルは、`settings.json` ファイルを編�
 
 ### 設定エディタのグループ化 (One Side by Side Settings editor)
 
-紹介が最後になりましたが、これも重要な改善になりますが、**Default Settings** と `settings.json`エディターをサイドエディターでグループ化することで、2 つの設定用エディタを個別に管理しなければならなかった問題に対処しました。
+紹介が最後になりましたが、これも重要な改善になりますが、**Default Settings** と `settings.json`エディタをサイドエディタでグループ化することで、2 つの設定用エディタを個別に管理しなければならなかった問題に対処しました。
 
 エディタには様々な改善が続けられて行きます...次のリリース計画に注目してくださいね
 
@@ -177,7 +177,7 @@ Git リポジトリをクローンし、VS Code で開くための新しいコ�
 
 ### 新しく追加されたエディタ設定 (New editor settings)
 
-* `window.showFullPath` - ウィンドウタイトルに、ワークスペースの相対パスではなくる、開いているファイルのフルパスを表示します
+* `window.showFullPath` - ウィンドウタイトルに、ワークスペースの相対パスではなく、開いているファイルのフルパスを表示します
 * `files.insertFinalNewline` - ファイル保存時、ファイルの最後に改行を自動的に追加します
 
 `editor.renderLineHighlight` 設定に新しいオプションが追加されました:
@@ -257,7 +257,7 @@ CSS 言語サポートでは、新しい [@apply ルール](https://tabatkins.gi
 
 JavaScript と TypeScript 言語サポートに [TypeScript 2.1](https://blogs.msdn.microsoft.com/typescript/2016/12/07/announcing-typescript-2-1/) を採用しています。 TypeScript 2.1 は、多くの新しい言語機能とツーリング機能を提供しています。詳細は、[TypeScript 2.1 の新機能について](https://github.com/Microsoft/TypeScript/wiki/What's-new-in-TypeScript#typescript-21)を参照してください。
 
-### JavaScript 
+### JavaScript
 
 VS Code における JavaScript サポートは TypeScript によって強化されています。また、VS Code には最新の TypeScript バージョンがバンドルされ、JavaScript サポートのためのいくつかの改良が施されています:
 
@@ -294,7 +294,7 @@ vscode-tslint 拡張機能が [TSLint 4.0](https://palantir.github.io/tslint/201
 
 ### マルチターゲットデバッグ (Multitarget debugging)
 
-マルチターゲットデバッグは、以前のマイルストーンで実装されました。今回のマイルストーンでは、新たにユーザーインターフェイスを追加し、マルチターゲットデバッグはもはや実験的な機能ではなくなりました。
+マルチターゲットデバッグは、以前のマイルストーンで実装されました。今回のマイルストーンでは、新たにユーザインタフェースを追加し、マルチターゲットデバッグはもはや実験的な機能ではなくなりました。
 
 マルチターゲットデバッグの使用は非常に簡単です: 最初のデバッグセッションを開始した後、別のセッションの起動をブロックすることはなくなり、2 つ目のセッションを起動することで UI が _multi-target mode_ に切り替わります:
 
@@ -348,7 +348,7 @@ IntelliSense によるスニペットの呼び出しは、カーソルが `confi
 
 デバッグ拡張機能は、この新機能の採用を選択する必要があり、すべてのデバッガがこの機能を利用できるまでは、しばらく時間を必要とします。VS Code 11月 リリースでは、ビルトインの Node.js デバッガだけが利用可能です。
 
-### 洗練されたいくつかのユーザインターフェース (Some UI Polish)
+### 洗練されたいくつかのユーザインタフェース (Some UI Polish)
 
 [ユーザーのリクエスト](https://github.com/Microsoft/vscode/issues/14125) により、ドラッグアンドドロップによってウォッチ式の順序を並べ替えることが可能になりました。
 
@@ -373,7 +373,7 @@ Node.js バージョンが 6.3 より古い場合は、`古い`デバッガで�
 ステップ実行したくないコードを回避するための機能が追加されました。これは、Visual Studio でも提供される [Just My Code](https://msdn.microsoft.com/ja-jp/library/dn457346.aspx) に良く似た機能です。
 この機能は、起動設定の `skipFiles` 設定で有効にすることができ、`skipFiles` はスキップするスクリプトパスのグロブパターン配列を設定します。
 
-使用例: 
+使用例:
 
 ```typescript
   "skipFiles": [
@@ -420,7 +420,7 @@ VS Code の Node デバッガは、ファイルから環境変数をロードし
 
 `env` ディクショナリで指定された環境変数は、ファイルからロードされた変数を上書きします。
 
-'.env'ファイルの例は次のようになります: 
+'.env'ファイルの例は次のようになります:
 
 ```yaml
 USER=doe
@@ -481,7 +481,7 @@ text document では、指定された位置からの [word-range](https://githu
 
 `OutputEvent` タイプは、構造化オブジェクトをデバッグコンソールに送信する機能としてサポートされ、VS Code で拡張オブジェクトとしてレンダリングされるようになりました。詳細は[こちら](https://github.com/Microsoft/vscode-debugadapter-node/issues/79)をご覧ください。
 
-新しい `RestartRequest` がデバッグプロトコルに追加されました。VS Code デバッガ UI に、デバッグアダプターを終了および再起動する `Restart` アクションの実装が必要なくなり、代わりに `RestartRequest` をアダプターに送信します。 詳細は[こちら](https://github.com/Microsoft/vscode/issues/14189)をご覧ください。
+新しい `RestartRequest` がデバッグプロトコルに追加されました。VS Code デバッガ UI に、デバッグアダプタを終了および再起動する `Restart` アクションの実装が必要なくなり、代わりに `RestartRequest` をアダプタに送信します。 詳細は[こちら](https://github.com/Microsoft/vscode/issues/14189)をご覧ください。
 
 ## その他 (Miscellaneous)
 
