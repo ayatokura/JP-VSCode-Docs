@@ -1,10 +1,3 @@
----
-Order: 18
-TOCTitle: January 2017
-PageTitle: Visual Studio Code January 2017
-MetaDescription: See what is new in the Visual Studio Code January 2017 Release (1.9)
-MetaSocialImage: 1_9_release-highlights.png
----
 # January 2017 (version 1.9)
 
 ## 1.9.1 Recovery Build 
