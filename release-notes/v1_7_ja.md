@@ -1,4 +1,21 @@
+---
+Order: 17
+TOCTitle: October 2016
+PageTitle: Visual Studio Code October 2016 1.7
+MetaDescription: See what is new in the Visual Studio Code October 2016 Release (1.7)
+MetaSocialImage: 1_7_release-highlights.png
+---
+
 # October 2016 (version 1.7)
+
+## 1.7.2 Recovery Build
+
+TypeScript Server の新しいバージョン(2.0.10) を含む 1.7.2 をリリースしました。サーバーを更新すると、デフォルトで JavaScript ユーザーための自動型取得 (ATA) 機能が再度有効になります。この機能により、JavaScript プロジェクトで利用する IntelliSense が大幅に改善され、TypeScript 宣言ファイル (.d.ts ファイル) を手動でインストールする必要がなくなります。この機能は、npmjs サービスへのクエリーによって実行され、使用されているモジュールに関連する型宣言ファイルを取得します。この機能を無効にする方法を含む、機能の詳細については、[このリリースノートの関連するセクションに含まれています](#better-javascript-intellisense)。
+
+The 1.7.2 release also adds the final 1.7 translations and fixes several important [issues](https://github.com/Microsoft/vscode/milestone/32?closed=1).
+1.7.2 リリースでは、残されていた 1.7 の翻訳が追加され、いくつかの重要な[問題](https://github.com/Microsoft/vscode/milestone/32?closed=1)が修正されています。
+
+Downloads: [Windows](https://vscode-update.azurewebsites.net/1.7.2/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.7.2/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.7.2/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.7.2/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.7.2/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.7.2/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.7.2/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.7.2/linux-rpm-ia32/stable)
 
 ## 1.7.1 Recovery Build
 
