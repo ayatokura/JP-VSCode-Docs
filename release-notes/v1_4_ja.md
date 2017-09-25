@@ -1,3 +1,10 @@
+---
+Order: 14
+TOCTitle: July 2016
+PageTitle: Visual Studio Code July 2016 1.4
+MetaDescription: See what is new in the Visual Studio Code July 2016 Release (1.4)
+---
+
 # July 2016 (version 1.4)
 
 7月の間、私たちは、機能追加への取り組みよりもバグのバックログ削減に多くの時間を割くことにしました。
