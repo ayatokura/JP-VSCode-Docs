@@ -1,3 +1,11 @@
+---
+Order: 18
+TOCTitle: November 2016
+PageTitle: Visual Studio Code November 2016
+MetaDescription: See what is new in the Visual Studio Code November 2016 Release (1.8)
+MetaSocialImage: 1_8_release-highlights.png
+---
+
 # November 2016 (version 1.8)
 
 ## 1.8.1 Recovery Build
@@ -14,7 +22,8 @@ VS Code は自動的に 1.8.1 にアップデートされますが、以下の�
 
 Downloads: [Windows](https://vscode-update.azurewebsites.net/1.8.1/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.8.1/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.8.1/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.8.1/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.8.1/linux-rpm-ia32/stable)
 
-## 11 月リリース版の概要 (November Release Summary)
+## November Release Summary
+## 11 月リリース版の概要
 
 Visual Studio Code 11 月リリース版へようこそ。 このリリースではいくつかの重要な更新があり、ハイライトは次のとおりです:
 
@@ -40,7 +49,8 @@ VS Code の重要な更新に関連するアップデート情報は、リリー
 * **[Node.js Debugging](#node-debugging)** - Just My Code、ファイルから環境変数を読み込み、sourcemap のヘルプ
 * **[Extension Authoring](#extension-authoring)** - 厳密な Null チェック、スニペット補完、デバッガ拡張機能の更新
 
-## ワークベンチ (Workbench)
+## Workbench
+## ワークベンチ
 
 ### Hot Exit
 
@@ -51,7 +61,8 @@ VS Code は、終了時に未保存のファイルの変更も記憶するよう
 
 Hot Exit 後に VS Code を次に起動すると、バックアップされたすべてのワークスペースおよびファイルがリストアされます。 Hot Exitの有効/無効 (`files.hotExit` 設定) にかかわらず、VS Code がクラッシュした場合にファイルを復元する機能もあります。Hot Exit の実装や背景および将来の予定などについては、[ブログの記事](http://code.visualstudio.com/blogs/2016/11/30/hot-exit-in-insiders)を参照してください。
 
-### ビュー・ピッカー (View Picker)
+### View Picker
+### ビュー・ピッカー
 
 ビュー、パネル、出力チャンネル、およびターミナルを表示するための新しいピッカーが追加され、隠れているビューを簡単に開くことができるようになりました。**Open View** コマンドを使用するか、**Quick Open** 上で `view` を入力したあとに `space` (単語ではなく空白のスペース)を入力することで開くことができます。
 
@@ -59,7 +70,8 @@ Hot Exit 後に VS Code を次に起動すると、バックアップされた�
 
 Windows と Mac では、`kbstyle(Ctrl+Q)` を押すとピッカーが表示されます。 Linux では、必要に応じてキーバインドを再割り当てする必要があります(Linux 上で `kbstyle(Ctrl+Q)` がアプリケーションの終了などに割り当てられている可能性がある場合） `kbstyle(Ctrl+Q)` を押し、`kbstyle(Ctrl)` キーを押したままにし、`kbstyle(Q)` を押すと、リストから項目にジャンプし、キーを離した後に選択したビューを開くことができます。
 
-### 統合ターミナルの改善 (Terminal improvements)
+### Terminal improvements
+### 統合ターミナルの改善
 
 統合ターミナルにいくつかの改良が行われました:
 
