@@ -1,117 +1,145 @@
+---
+Order: 15
+TOCTitle: August 2016
+PageTitle: Visual Studio Code August 2016 1.5
+MetaDescription: See what is new in the Visual Studio Code August 2016 Release (1.5)
+MetaSocialImage: 1_5_social.jpg
+---
+
 # August 2016 (version 1.5)
 
-VS Code チームの 8 月はとても大変なひと月でしたが、おかげで素晴らしいリリースを提供することができました。主要なアップデートは UI の更新ですが、拡張機能サポート、デバッグ機能、拡張生を提供する API のサポートなど幅広さに感銘を受けて頂けると考えています。
+## 1.5.3 Fully Translated Build
 
-本リリースのハイライトは以下のとおりです:
+予定していたよりも 2 週間ほど長くかかっていましたが、1.5.3リリースは、サポートされている 9 つの言語に完全に翻訳された 8 月リリース版となります:
 
-* **Workbench**: ファイルアイコンテーマの実装によりファイルエクスプローラがより便利になります。 VS Code には、2 つのアイコンテーマが含まれていますが、マーケットプレースからより多くのテーマが提供されます。
+Downloads: [Windows](https://vscode-update.azurewebsites.net/1.5.3/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.5.3/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.3/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.5.3/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.5.3/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.3/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.5.3/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.5.3/linux-rpm-ia32/stable)
+
+## 1.5.2 Recovery Build
+
+いくつかの重要な問題を解決するために 1.5.2 リカバリービルドをリリースしました:
+
+* [11702](https://github.com/Microsoft/vscode/issues/11702): Unable to bypass ssl verification any more for corp firewall
+* [11714](https://github.com/Microsoft/vscode/issues/11714): Terminal focus key binding is not working correctly after update to 1.5
+* [11742](https://github.com/Microsoft/vscode/issues/11742): Bug in cursor location within user snippets
+* [11754](https://github.com/Microsoft/vscode/issues/11754): ShowQuickPick does not fulfil the promises
+
+Downloads: [Windows](https://vscode-update.azurewebsites.net/1.5.2/win32/stable) | [OS X](https://vscode-update.azurewebsites.net/1.5.2/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.2/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.5.2/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.5.2/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.2/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.5.2/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.5.2/linux-rpm-ia32/stable)
+
+## 1.5.1 Recovery Build
+
+`editor.fontSize` が 0 に設定されている場合に何も表示されなくなる[問題](https://github.com/Microsoft/vscode/issues/11715)を解決するために、1.5.1 リカバリービルドをリリースしました。
+
+Downloads: [Windows](https://vscode-update.azurewebsites.net/1.5.1/win32/stable) | [OS X](https://vscode-update.azurewebsites.net/1.5.1/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.1/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.5.1/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.5.1/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.1/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.5.1/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.5.1/linux-rpm-ia32/stable)
+
+## August Release Summary
+## 2016/8 月版のリリースまとめ
+
+VS Code チームの 8 月は、とても大変なひと月でしたが、おかげで素晴らしいリリースを提供することができました。主要なアップデートは UI の更新、拡張機能サポート、デバッグ機能、拡張性を提供する API のサポートです。
+
+本リリースのハイライトは次のとおりです:
+
+* **Workbench**: ファイルアイコンテーマの実装により、ファイルエクスプローラがより便利になります。 VS Code には、2 つのアイコンテーマが含まれていますが、マーケットプレースからより多くのテーマが提供されます
+* **Debugging**: デバッグコンソールにおける [REPL(Read-Eval-Print-Loop) 対話的に実行して結果を確認する手段] を効率良く実行するために、IntelliSense をサポートしました(現時点では
+ Node.js のみ)。デバッガプロトコルを利用することにより、他のデバッグ拡張機能でも IntelliSense をサポートすることが可能になります。また、複数行の入力をサポート
 * **Extensions**:
-  * インストール済みとマーケットプレイス上の拡張機能のコントリビューション(コマンド、設定、言語 ID)をすぐに参照することが可能になりました
-  * インストール回数や評価の並べ替えでマーケットプレイスの拡張機能を検索することが可能になりました
-  * インストール済みの拡張機能の自動更新および更新可能な全ての拡張機能を一度にアップデートすることが可能になりました
-* **Editor**: ワードラップと自動保存を制御する新しい設定が追加されました。また、大規模なプロジェクトのためにクイックオープンのパフォーマンスを向上
-* **Languages**: VS Code で、より簡単に TypeScript 2.0 RC を使用するための構成設定を追加。任意の言語に Emmet サポートを追加可能に
-* **Debugging**: デバッグコンソール REPL のために IntelliSense と複数行の入力をサポートしました
-* **Extension Authoring**: Expanded editor command API to support VIM emulation. New TextMate theme settings for finer theming control.
+  * インストール済み、または、マーケットプレイス上にある拡張機能のコントリビューション(コマンド、設定、言語 ID)を VS Code 上から参照することが可能に
+  * インストール回数や評価の並べ替えでマーケットプレイスの拡張機能を検索することが可能に
+  * インストール済みの拡張機能の自動更新および、更新可能な全ての拡張機能を一度にアップデートすることが可能に
+* **Editor**: ワードラップと自動保存を制御する新しい設定を追加
+* **Quick Open**: 大規模なプロジェクトのためにクイックオープンのパフォーマンスを向上
+* **Extension Authoring**: VIM 拡張機能のためにエディタ・コマンド API を拡張
+
+>**Note:** 完全に翻訳された 1.5 を提供する予定でしたが、残念ながら、翻訳に関連するいくつかの遅延が発生し、このリリースでは計画を見送ることにしました。近く、これらの成果を含んだアップデートを提供する予定です
 
 ## Workbench
 
 ### File Icon Themes
+### ファイルアイコンテーマ
 
-ファイルエクスプローラは、*File Icon Themes* の機能追加により、ファイルのアイコンを表示することが可能になりました。
+ファイルエクスプローラは、ファイルとフォルダのアイコンを表示することが可能になりました。ファイルアイコンを有効にするには、File Icon Theme を選択してください:
 
-- グローバルメニューから設定する方法: **File** > **Preferences** > **File Icon Theme** (Mac では、 **Code** の配下にある **Preferences** メニュー内にあります)
-- **コマンドパレット** (`kb(workbench.action.showCommands)`) から呼びす **Preferences: File Icon Theme** コマンド
+- グローバルメニューから設定する方法: **File(ファイル)** > **Preferences(基本設定)** > **File Icon Theme** (Mac では、 **Code** の配下にある **Preferences (基本設定)** メニュー内にあります)
+- **コマンドパレット** (Win, Linux: Ctrl+Shift+P, Mac: ⇧⌘P) から呼びす **Preferences: File Icon Theme** コマンド
 
-デフォルトでは、ファイルのアイコンセットが設定されていないため、ファイルエクスプローラにはアイコンは表示されません。
-アイコンテーマが選択されると、テーマが適用され、再起動後も有効になります。
+デフォルトでは、ファイルアイコンセットが設定されていないため、ファイルエクスプローラにアイコンは表示されません。アイコンテーマが選択されると、テーマが適用され、再起動後も有効になります。
 
-VS Code 1.5 には、ファイルとフォルダのアイコンのみで構成されるシンプルなアイコンテーマ: **Standard** が含まれています。
+このリリースでは、ファイルとフォルダのアイコンのみがファイルエクスプローラに表示されますが、今後、エディタタブや他の場所でもファイルアイコンを使用できるようにする予定です。
 
-Visual Studio Code Minimal icon theme:
-![minimal icon theme](images/1_5/icon-theme-minimal.png)
+VS Code 1.5 には 2 つのアイコンテーマが含まれていますが、コミュティから多くのテーマが提供されることに期待しています。
 
-The Visual Studio Code Seti icon theme:
+|None (デフォルト)|Minimal File Icons|Seti File Icons|
+|-----|-----|-----|
+|![None/Standard Icon Theme](https://code.visualstudio.com/images/1_5_None.png)|![Minimal Icon Theme](https://code.visualstudio.com/images/1_5_Minimal.png)|![Seti Icon Theme](https://code.visualstudio.com/images/1_5_Seti.png)|
 
-![seti icon theme](images/1_5/icon-theme-seti.png)
+Jesse Weed が作成した [Seti UI](https://github.com/jesseweed/seti-ui) テーマ、Roberto Huertas によるアイコン拡張機能の実装により、この機能を望んでいた多くのユーザーにとても素晴らしい Seti UI アイコンテーマを提供することが可能になりました。
 
-Credit goes to Jesse Weed and all contributors to the popular [Seti UI](https://github.com/jesseweed/seti-ui) theme for the fantastic Seti UI icons.
+### 統合ターミナル内のキーバインディングサポート (Key binding support within the Integrated Terminal)
 
-### Key binding support within the Integrated Terminal
-
-A new setting `terminal.integrated.commandsToSkipShell` was added that contains an array of commands that skip processing by the shell and instead are processed by VS Code's key binding system. This allows keys such as `kbstyle(F1)` to now work while focus is in the terminal.
+新しい `terminal.integrated.commandsToSkipShell` 設定には、シェルに送信したくない VS Code のコマンド ID を指定します。この設定により、ターミナルがフォーカスされている場合でも、指定されたキーバインドはシェルに渡されず、VS Code のコマンドアクションを使用することができます。例: フォーカスがターミナルにあっても、`F1` などの機能を実行することを可能にします。
 
 ## Editor
 
 ### Editor settings
+### エディタの設定
 
-You can now disable the current line highlight via `editor.renderLineHighlight`.
+このリリースではいくつか便利な[エディタの設定](/docs/customization/userandworkspace.md)が追加されました:
 
-Thanks to [PR #10515](https://github.com/Microsoft/vscode/pull/10515) from [Nagaraj (@ramamurthynagaraj)](https://github.com/ramamurthynagaraj), you can now customize the editor's font weight via `editor.fontWeight`.
+* `editor.renderLineHighlight` - 現在の行のハイライトを無効にします
+* `editor.fontWeight` - エディタのフォントの太さをカスタマイズします (**normal**, **bold**).
+* `editor.wordWrap` - `editor.wrappingColumn` 設定をベースに、ワードラップを切り替えます。
 
-Thanks to [PR #7029](https://github.com/Microsoft/vscode/pull/7029) from [Ashhar Hasan (@hashhar)](https://github.com/hashhar), there is a new setting `editor.wordWrap` that toggles word wrapping and respects `editor.wrappingColumn`.
+### Auto Save when application loses focus
+### アプリケーションがフォーカスを失った時に自動保存
 
-### フォーカスを失ったときに未保存状態のファイルを自動保存 (Auto Save when application loses focus)
-
-ウィンドウを切り替えをトリガーにファイルを自動保存(`files.autoSave` [setting](/docs/customization/userandworkspace.md))する、新しい `onWindowChange` 設定を追加
+ウィンドウの切り替えをトリガーに、ファイルを自動保存(`files.autoSave` [setting](/docs/customization/userandworkspace.md))する、新しい `onWindowChange` 設定を追加
 
 ### Quick Open got a lot quicker
+### より高速になったクイックオープン
 
-過去 2 回の Iteration に渡り、大規模なワークスペースのために行った改修ではクイックオープンが速く動作するように見えていました。
-例えば、'大規模' とは 'Chromium-repository-large' のようなものです。新しくクローニングされた Chromium リポジトリには、220,000 以上のファイルが含まれています。
-我々の開発マシンにおけるクイックオープンでは、バージョン 1.3 の約 30 秒から、バージョン 1.5 では約 3 秒になりました。これは、キャッシュを利用していない時のパフォーマンスです。
+過去 2 回のイテレーションに渡り、大規模なワークスペース ('大規模' とは 'Chromium-repository-large'のようなワークスペース)のために行った改修においてクイックオープンの動作が高速化されました。新しくクローニングされた Chromium リポジトリには、220,000 以上のファイルが含まれています。
+我々の開発マシンにおけるクイックオープンでは、バージョン 1.3 の約 30 秒から、バージョン 1.5 では約 3 から 4 秒程度(もちろん、プラットフォームに依存します) になりました。
+これは、キャッシュを利用していない時のパフォーマンスですが、キャッシュの使用を前提に 0.5 秒台の結果を得るようにしました。
 
-我々はキャッシュの使用を前提に、0.5 秒台の結果を得るようにします。
-
-Since we start updating the caches immediately when the user invokes Quick Open and don't block the UI thread when we read from the caches, the 0.5 seconds is pretty much the perceived end-user performance even when the caches were out-of-date. As said, this is for the Chromium repository. 
-
-ユーザーがクイックオープンを呼び出すときに、すぐにキャッシュの更新を開始し、キャッシュから読み込まれたときに UI スレッドをブロックすることはなく、0.5秒と言う値は、キャッシュが期限切れのであったとしても、感知されるエンド・ユーザーのパフォーマンスはかなりあります。述べたように、これは Chromium リポジトリのためのものです。
-
-あなたのフォルダが小さい場合は、0.5秒を待つことはなく、実際には、全く待つ必要はありません。
+ユーザーがクイックオープンを呼び出すときに、すぐにキャッシュの更新を開始し、キャッシュから読み込まれたときに UI スレッドをブロックすることはなく、0.5秒と言う値は、キャッシュが期限切れであったとしても、エンド・ユーザーが気づくパフォーマンスです。
+上で述べたように、これは Chromium リポジトリのためのものであり、あなたのプロジェクトが小さい場合は、遅延は全く見られないでしょう。
 
 ### Keep Quick Open visible even when focus is outside
+### フォーカスに影響されないクイックオープン
 
-フォーカスがウィジェットの外に移動したときにクイックオープンを閉じるべきかを制御するために新たな設定 `workbench.quickOpen.closeOnFocusLost`を追加しました。
-デフォルトでは、クイックオープンは閉じますが、VSコードの外にフォーカスがある場合であっても開いたままにするには `false` に設定します。
-
-### フォーカスが移動した場合でも、クイックオープンを開いたままにする新しい設定 (New setting to keep Quick Open visible even when focus is outside)
-
-フォーカスの移動に影響されるクイックオープンウィジェットの開閉を制御することが可能な新しい `workbench.quickOpen.closeOnFocusLost` 設定を追加しました。
-デフォルトでは、フォーカスが移動するとクイックオープンは閉じますが、設定により、それを開いたままにすることが可能になります。
-
+フォーカスの移動に影響されるクイックオープンウィジェットの開閉を制御することが可能な、新しい `workbench.quickOpen.closeOnFocusLost` 設定を追加しました。
+デフォルトでは、フォーカスが移動するとクイックオープンは閉じますが、`false` を設定することにより、それを開いたままにすることが可能になります。
 
 ### Include symbol results in file Quick Open results
+### ファイルクイックオープンの結果に含まれるシンボル結果
 
-ファイル検索のクイックオープンに表示されるシンボルを抑制するための新しい設定 `search.quickOpen.includeSymbols`  を追加しました。
+ファイル検索のクイックオープンに表示されるシンボルを抑制するための新しい設定 `search.quickOpen.includeSymbols` を追加しました。
 以前のリリースでは、一般的なファイルピッカー内にシンボルの結果を含んでいましたが、問題を抱えているためこれをオプションにしました。
 シンボルを含む以前の動作に戻す必要がある場合は、このオプションを `true` に設定してください。
-
 この設定を有効にするとグローバルシンボルの結果を返すための検索に時間を必要とします。そのため、全体的なファイル検索速度が遅くなることに注意してください。
 
->**Note:** **Show All Symbols** (`kb(workbench.action.showAllSymbols)`) コマンドを使用して、グローバルシンボルを検索することができます。
+>**Note:** **Show All Symbols** (Win, Linux: `Ctrl+T`,  Mac: `⌘T`) コマンドを使用して、グローバルシンボルを検索することができます。
 
 ### New actions to move Tabs left or right within a group
-
-エディタグループ内においてタブを右または左に移動することを可能にする新しいアクションが追加されました。
-素早いアクセスを得るために `workbench.action.moveEditorLeftInGroup` と `workbench.action.moveEditorRightInGroup` にキーバインドを割り当てることができます。
+### エディタグループ内で左または右にタブを移動するための新しいアクション
 
 エディタのグループ内にて、タブ(タブのヘッダ)を右または左に移動するための新しいアクションが追加されました。
+追加された 2 つのアクションとそれらのデフォルトキーバインドは次のとおりです:
 
-追加された 2 つのアクションとそれらのデフォルトキーバインドは下記のとおりです: 
-
-Action | Command Palette | Key Binding
+アクション | コマンドパレット | キーバインディング
 --- | --- | ---
-`workbench.action.moveEditorLeftInGroup` | エディタを左に移動 | `kb(workbench.action.moveEditorLeftInGroup)`
-`workbench.action.moveEditorRightInGroup` | エディタを右に移動 | `kb(workbench.action.moveEditorRightInGroup)`
+`workbench.action.moveEditorLeftInGroup` | エディタを左へ移動 (Move Editor Left) | `(Win, Linux: Ctrl+Shift+PageUp, Mac: ⌘K ⇧⌘←)`
+`workbench.action.moveEditorRightInGroup` | エディタを右へ移動 (Move Editor Right) | `(Win, Linux: Ctrl+Shift+PageDown, Mac: ⌘K ⇧⌘→)`
 
 ### Closed editors reopen at their previous index
+### 以前のインデックスで再開されるエディタアクション
 
-直前に閉じられたエディタを再呼び出しするアクション `workbench.action.reopenClosedEditor` (`kb(workbench.action.reopenClosedEditor)`) を新たに提供します。
+直前に閉じられたエディタを再呼び出しするアクション `workbench.action.reopenClosedEditor` (Win, Linux: Ctrl+Shift+T, Mac: ⇧⌘T) を新たに提供します。
 このリリースでは、エディタはクローズされる前と同じ順序を維持し、同じインデックスで再開されます。
 
-### Mac OS: Cmd+E に割り当てられたクイックオープンの無効化 (Mac OS: Cmd+E no longer opens Quick Open)
+### Mac OS: Cmd+E no longer opens Quick Open
+### Mac OS: Cmd+E によるクイックオープンの廃止
 
-ファイル検索のためのクイックオープンを起動する(ドキュメント化されていない)キーバインドを削除することを決めました。 `Cmd+E` の動作を以前のバージョンに戻したい場合は、キーバインディングの構成を設定します:
+ファイル検索のためのクイックオープンを起動する(ドキュメント化されていない)キーバインドを削除することを決めました。 `kbstyle(Cmd+E)` の動作を以前のバージョンに戻したい場合は、キーバインディングの構成を設定します:
 
 ```json
 { "key": "cmd+e", "command": "workbench.action.quickOpen" }
@@ -123,32 +151,31 @@ Action | Command Palette | Key Binding
 
 ### TypeScript
 
-Visual Studio Code には TypeScript の正式にリリースされたバージョンがバンドルされています。8月のリリースでは、バージョン `1.8.1` になり、9月中に、バージョン `2.0` が利用可能になる予定ですが、`npm install -g typescript@rc` を実行することによりリリース候補版をインストールすることもできます。
-異なる TypeScript バージョンを VS Code 上またはコマンドラインツールから利用するとバージョンに依存したエラーによりビルドツールが混乱してしまいます。当然ですが、`2.0` でサポートされた機能は `1.8.1` では利用できません。もし、VS Code 上で TypeScript の新しいバージョンを使用したい場合は、`typescript.tsdk` 設定を使用します。詳細は [マニュアル](https://code.visualstudio.com/docs/languages/typescript#_using-newer-typescript-versions) を参照してください。
+Visual Studio Code には TypeScript の正式にリリースされたバージョンがバンドルされており、8月のリリースでは、バージョン `1.8.10` となります。また、9月中に、バージョン `2.0` が利用可能になる予定ですが、`npm install -g typescript@rc` を実行することにより、リリース候補版をインストールすることもできます。
+
+異なる TypeScript バージョンを VS Code 上またはコマンドラインツールから利用すると、バージョンに依存したエラーによりビルドツールが混乱してしまいます。当然ですが、`2.0` でサポートされた機能は `1.8.1` では利用できません。もし、VS Code 上で TypeScript の新しいバージョンを使用したい場合は、`typescript.tsdk` 設定を使用します。詳細は [マニュアル](https://code.visualstudio.com/docs/languages/typescript#_using-newer-typescript-versions) を参照してください。
+
 VS Code は、ワークスペースフォルダに任意の TypeScript バージョンが含まれていることを検知します。(`npm install typescript@x.x.x` 経由でインストールされたもの)
 
 VS Code は、ワークスペースにインストールされた TypeScript を検出かつ `typescript.tsdk` 設定が使用されていない場合、VS Code にバンドルされる TypeScript バージョンをユーザに通知し、バンドルバージョンを使用するかどうかを尋ねます。
 
-![TypeScript Version Check](images/1_5/ts-version-check.png)
+![TypeScript Version Check](https://code.visualstudio.com/images/1_5_ts-version-check.png)
 
-**More Information** アクションは、常にローカルにインストールされた TypeScript のバージョンを使用するよう VS Code を設定する方法のドキュメントを表示します。
-
-VS Code では、TypeScript 言語サーバがグローバルにインストールされている `tsc` コンパイラと差異があるかをチェックします。
-異なる場合は、対応する情報メッセージが示されます。
+**More Information** アクションは、常にローカルにインストールされた TypeScript のバージョンを使用するよう VS Code を設定する方法のドキュメントを表示します。VS Code では、TypeScript 言語サーバがグローバルにインストールされている `tsc` コンパイラと差異があるかをチェックします。異なる場合は、対応する情報メッセージが示されます。
 
 ### HTML
 
 組み込みのコード補完プロバイダをアクティブにするかを制御するために、新しい設定が追加されました。対応するサジェスチョンを参照したくない場合は、これらの設定を使用します。
 
 ```json
-  // Configures if the built-in HTML language support suggests Angular V1 tags and properties.
-  "html.suggest.angular1": true,
+// Configures if the built-in HTML language suggests Angular V1 tags and properties.
+"html.suggest.angular1": true,
 
-  // Configures if the built-in HTML language support suggests Ionic tags, properties and values.
-  "html.suggest.ionic": true,
+// Configures if the built-in HTML language suggests Ionic tags, properties and values.
+"html.suggest.ionic": true,
 
-  // Configures if the built-in HTML language support suggests HTML5 tags, properties and values.
-  "html.suggest.html5": true
+// Configures if the built-in HTML language suggests HTML5 tags, properties and values.
+"html.suggest.html5": true
 ```
 
 ### LESS
@@ -164,10 +191,11 @@ LESS 構文の検証は、最近 LESS に追加された機能の一部をサポ
 これらの機能の詳細については、[LESS ドキュメント](http://lesscss.org/features/)を参照してください。
 
 ### Settings to enable/disable Emmet for languages
+### 言語のための Emmet 設定
 
 新しく追加された `emmet.syntaxProfiles` 設定を利用することで、他の言語と既存の Emmet 構文プロファイル (例えば `html`、`css` など) を関連付けることができます。設定は、言語 ID を受け取り、Emmet プロファイルに関連付けます。
 
-例えば、JavaScript で Emmet HTML 略語を使用するには下記のように設定します。
+例えば、JavaScript で Emmet HTML 略語を使用するには次のように設定します:
 
 ```json
 {
@@ -178,7 +206,6 @@ LESS 構文の検証は、最近 LESS に追加された機能の一部をサポ
 ```
 
 `emmet.excludeLanguages` 設定を使用して特定の言語における Emmet 略語の使用を無効にすることができます。
-
 次の設定は、PHP ファイル編集時に Emmet を無効にします:
 
 ```json
@@ -190,8 +217,9 @@ LESS 構文の検証は、最近 LESS に追加された機能の一部をサポ
 ```
 
 ### Linter Extensions
+### リンター拡張機能 (Linter Extensions)
 
-`vscode-eslint` と `vscode-tslint` 拡張機能を、ファイル保存時に実行することを可能とする設定を追加しました。
+`vscode-eslint` と `vscode-tslint` 拡張機能を、ファイル保存時に実行する新しい設定を追加しました。
 
 ```json
 {
@@ -202,103 +230,106 @@ LESS 構文の検証は、最近 LESS に追加された機能の一部をサポ
 ## Extensions
 
 ### Easier Updates
+### より簡単な更新
 
-すべての拡張機能を更新するためのアクションが用意されました。
+**すべての拡張機能を更新**するためのアクションが用意されました。
 
-![Extension update all](images/1_5/extension-update-all.png)
+![Extension update all](https://code.visualstudio.com/images/1_5_extension-update-all.png)
 
 さらに、`extensions.autoUpdate` 設定を `true` に設定すると、ユーザーの介入なしに拡張機能を自動更新できるようになります。
 
 ### Extension Contribution Details View
-
-VS Code で拡張機能を閲覧すると、
+### 拡張機能のコントリビューション詳細ビュー
 
 拡張機能をインストールする前に、各拡張機能のコントリビューション・ポイントを表示する **Contributions** セクションを VS Code の拡張機能閲覧で参照することが可能になりました。
 
-![Extension Details](images/1_5/extension-details.png)
+![Extension Details](https://code.visualstudio.com/images/1_5_extension-details.png)
 
 ### Extension Sorting
+### 拡張機能一覧のソート
 
-拡張機能ビューにおいて、インストールカウント以外の方法で拡張機能を並べ替えることができるようになりました。
+拡張機能ビューは、インストールカウント以外の方法で拡張機能を並べ替えることができるようになりました。
 
-![Extension sort](images/1_5/extension-sort.png)
+![Extension sort](https://code.visualstudio.com/images/1_5_extension-sort.png)
 
 ### Marketplace Performance Improvements
+### マーケットプレースのパフォーマンス改善
 
-[マーケットプレース](https://marketplace.visualstudio.com/vscode)は、ダウンロード時間とダウンロードと拡張クエリの可用性を改善するために、CDN に刷新されました。
+[マーケットプレース](https://marketplace.visualstudio.com/vscode)は、ダウンロードにおけるダウンロード時間と拡張クエリの可用性を改善するため、CDN に刷新されました。
 
 ## Debugging
 
 ### Suggestions in Debug Console
+### デバッグコンソールでの Intelisense サポート
 
-[VS Code ユーザからの要求]((https://github.com/Microsoft/vscode/issues/8114))により、**デバッグコンソール** で、入力中の内容に関するサジェスチョンを示すことが可能になりました。
-現時点では、この機能は Node.js デバッグのためにのみ利用可能ですが、将来的には他のデバッガで使用できるようになる予定です。
+**デバッグコンソール** で、入力中の内容に関するサジェスチョンを示すことが可能になりました。現時点では、この機能は Node.js デバッグのためにのみ利用可能ですが、他のデバッガではデバッガ・プロトコルを通してサジェスチョン機能を実装することが可能です。
 
-![Debug Console Suggest](images/1_5/debug_repl_suggest.png)
+![Debug Console Suggest](https://code.visualstudio.com/images/1_5_debug_repl_suggest.png)
 
 ### Multi-Line Debug Console Input
+### デバッグコンソールへの複数行入力
 
-The **Debug Console** input now expands to multiple lines when needed. The expansion can be triggered using `kbstyle(Shift + Enter)`.
-デバッグコンソール入力は現在、複数行に展開されます。拡張はkbstyle（Shiftキーを+ Enter）を使用してトリガすることができます。
+**デバッグコンソール**への複数行にまたがる入力が可能になりました。複数行の入力は、`Shift + Enter` で行うことが可能です。
 
-![Debug Console Multiline](images/1_5/debug_repl_multiline.png)
+![Debug Console Multiline](https://code.visualstudio.com/images/1_5_debug_repl_multiline.png)
 
 ### Multi-Level Variable Paging
+### マルチレベルの変数ページング
 
 子供の数が多いデータ構造は、マルチレベルのチャンクにより表示されます。これは、より良いパフォーマンスをもたらす他、簡単に多数の子を横断することができます。
 
-![Variable Multi Level Paging](images/1_5/debug_variable_paging.png)
+![Variable Multi Level Paging](https://code.visualstudio.com/images/1_5_debug_variable_paging.png)
 
 ## Node Debugging
 
 ### Launch debug target in Integrated Terminal
+### 統合ターミナル上でのデバッグターゲット実行
 
-**Integrated Terminal** で Node.js デバッグターゲットを起動できるようになりました。
-対話型端末からの読み取りやそれらが実行されている端末上の出力を制御する必要があるような Node.jsベースのコマンドラインアプリケーションを開発する際に役立ちます。
+**Integrated Terminal** で Node.js デバッグターゲットを起動できるようになりました。対話型端末からの読み取りやそれらが実行されている端末上の出力を制御する必要があるような Node.jsベースのコマンドラインアプリケーションを開発する際に役立ちます。Node.js プログラムを実行するために 3 つのオプション (**Debug Console**, **Integrated Terminal**, 外部コンソール)を提供してきましたが、このリリースから `launch.json` の `externalConsole` アトリビュートを非推奨とし、新しいアトリビュート `console` を導入し、次の値を設定できるようにしました: `internalConsole`, `integratedTerminal`, `externalTerminal`
 
-Node.js プログラムを実行するために 3 つのオプション (**Debug Console**, **Integrated Terminal**, 外部コンソール)を提供してきましたが、このリリースから `launch.json` の `externalConsole` 属性を非推奨とし、新しい属性 `console` を導入し、次の値を設定できるようにしました: `internalConsole`, `integratedTerminal`, `externalTerminal`
+![New launch attribute Attribute console](https://code.visualstudio.com/images/1_5_debug-console-attribute.png)
 
-![New launch attribute Attribute console](images/1_5/debug-console-attribute.png)
-
-注意: VS Code は、`internalConsoleOptions` 属性に構成されたオプションに応じて、**統合ターミナル** を非表示にして **Debug Console** を開きます。
+>**Note:** VS Code は、`internalConsoleOptions` 属性に構成されたオプションに応じて、**統合ターミナル** を非表示にして **Debug Console** を開きます。
 これを避けるには、 `internalConsoleOptions` へ `neverOpen` を設定してください。
 
-注意: このリリースでは、すべてのデバッグセッションは、新しい**統合ターミナル**を作成します。
-次のリリースでは、可能な場合は、既存の**統合ターミナル**を再利用する実装を予定しています。
+>**Note:** このリリースでは、すべてのデバッグセッションは、新しい**統合ターミナル**を作成します。次のリリースでは、可能な場合は、既存の**統合ターミナル**を再利用する実装を予定しています。
 
 ## Extension Authoring
+## 拡張機能のオーサリング
 
->**Note:** VS Code 8月のリリース版では、TypeScript `1.8.10` の正式版がバンドルされ、拡張機能の開発は、このバージョンを使用して行われるべきです。将来のリリースにおいて、拡張機能の開発のために TypeScript `2.0.x` をサポートする予定です。
+>**Note:** VS Code 8 月のリリース版では、TypeScript `1.8.10` の正式版がバンドルされ、拡張機能の開発は、このバージョンを使用して行われるべきです。将来のリリースにおいて、拡張機能の開発のために TypeScript `2.0.x` をサポートする予定です。
 
 ### Editor Commands
+### エディタコマンド
 
 [VIM 拡張機能](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)の[ロードマップ](https://github.com/VSCodeVim/Vim/blob/master/ROADMAP.md)を実現するために、特にウィンドウのスクロールや折り畳みに関連する新しい API をエディタに追加しました:
 
 - **Scroll editor:** エディタ画面の上下スクロール - See [9609](https://github.com/Microsoft/vscode/issues/9609).
 
 ```javascript
-commands.executeCommand('editorScroll', {to: 'up', by: 'page', value: '1'})
+  commands.executeCommand('editorScroll', {to: 'up', by: 'page', value: '1'})
 ```
 
 - **Reveal line:** エディタ上で異なる論理位置とラインを明確にする - See [9609](https://github.com/Microsoft/vscode/issues/9609).
 
 ```javascript
-commands.executeCommand('revealLine', {lineNumber: '10', at: 'top'})
+  commands.executeCommand('revealLine', {lineNumber: '10', at: 'top'})
 ```
 
 - **Fold:** 現在のカーソルの上または下または `n` レベルでエディタのコンテンツを折りたたみます。
 
 ```javascript
-commands.executeCommand('editor.fold', {levels: '2', up: false})
+  commands.executeCommand('editor.fold', {levels: '2', up: false})
 ```
 
 - **Unfold:** 現在のカーソルの上または下または `n` レベルでエディタの折りたたまれているコンテンツを展開します。
 
 ```javascript
-commands.executeCommand('editor.unfold', {levels: '2'})
+  commands.executeCommand('editor.unfold', {levels: '2'})
 ```
 
 ### Powerful Completion Items
+### 補完機能の強化
 
 [`Completion Item`](https://github.com/Microsoft/vscode/blob/master/src/vs/vscode.d.ts#L2246) は、追加のテキスト編集や追加のコマンドをサポートしました。
 
@@ -308,12 +339,13 @@ commands.executeCommand('editor.unfold', {levels: '2'})
 * 補完後、プロジェクトにライブラリを追加
 
 ### Stable Input Box and Quick Open
+### 安定した入力ボックスとクイックオープン
 
 クイックオープンが開いているか何か入力を求められているときに、フォーカスが VS Code または他のウィンドウの別の部分に移動してもダイアログが閉じないよう制御する、新しい `ignoreFocusOut` オプションが追加されました。
-
-また、プログラムのキャンセルトークンを使用してそれらを閉じることができます。
+また、キャンセルトークンを使用してそれらをプログラムから閉じることができます。
 
 ### New context menu keys
+### 新しいコンテキストメニューキー
 
 キーバインディングとメニュー項目をより細かく制御するための新しいコンテキストキーを追加しました：
 
@@ -321,16 +353,17 @@ commands.executeCommand('editor.unfold', {levels: '2'})
 * `resourceFilename`  - エディタ/エクスプローラで現在アクティブなファイルの名前
 
 ### New Theme Settings
+### 新しいテーマ設定
 
-このリリースでは、TextMate のテーマの設定として、以下の内部の色を公開すると共に、テーマの作成者は、自分たちのテーマでそれらをカスタマイズすることが可能になります。
+このリリースでは、TextMate のテーマの設定として、以下の内部の色を公開すると共に、テーマの作成者は、これらをカスタマイズすることが可能になります。
 
 - `rangeHighlight`: 範囲の背景色を強調します。これは、クイックオープンと検索機能で利用されます。
-- `selectionHighlight`: 選択されたリージョンの背景色を強調 Background color of regions highlighted while selecting.
-- `inactiveSelection`: Background color of selections when not in focus.
-- `wordHighlight`: Background color of a symbol during read-access, like reading a variable.
-- `wordHighlightStrong`: Background color of a symbol during write-access, like writing to a variable.
-- `findMatchHighlight`: Background color of regions matching the search.
-- `currentFindMatchHighlight`: Background color of the current region matching the search.
+- `selectionHighlight`: 選択によりハイライトされたリージョンの背景色
+- `inactiveSelection`: フォーカスされていない選択された領域の背景色
+- `wordHighlight`: 変数を読み取るような読み取りアクセス中のシンボルの背景色
+- `wordHighlightStrong`: 変数への書き込みのような書き込みアクセス時のシンボルの背景色
+- `findMatchHighlight`: 検索条件に一致するリージョンの背景色
+- `currentFindMatchHighlight`: 検索条件に一致する現在の領域の背景色
 - `findRangeHighlight`: 検索のために選択された領域の背景色
 - `activeLinkForeground`: アクティブリンクの色
 - `hoverHighlight`: ホバーの背景色
@@ -338,21 +371,22 @@ commands.executeCommand('editor.unfold', {levels: '2'})
 - `guide`: 入れ子のレベルを示すインデントガイドの色
 
 ### Integrated Terminal API
+### 統合ターミナル API
 
-An API has been added that provides extensions with some basic control over the integrated terminal like creating terminal(s) and sending text to them. See the [`window` API reference page](https://code.visualstudio.com/docs/extensionAPI/vscode-api#_window) for a full description of the API.
+ターミナル（複数可）を作成し、それらにテキストを送信するような、統合端末を超えた基本的な制御が可能となるいくつかの拡張を API に追加しました。API の詳細な説明については、[`window` API reference page](https://code.visualstudio.com/docs/extensionAPI/vscode-api#_window) を参照してください。
 
 ### Additions to the Debug Protocol
+### デバッグプロトコルへの機能追加
 
-[debug protocol](https://github.com/Microsoft/vscode-debugadapter-node/blob/master/protocol/src/debugProtocol.ts) は、次の領域（とVSコードが既に対応する提供済みの UI）に拡張されています:
+[debug protocol](https://github.com/Microsoft/vscode-debugadapter-node/blob/master/protocol/src/debugProtocol.ts) は、次のエリア（とVSコードが既に対応する提供済みの UI）に拡張されています:
 
-* **IntelliSense Support for the Debug Console**: デバッグアダプタは、**Debug Console** で IntelliSense によるサジェスチョンの提案を提供するために、`completions` リクエストを実装することができます。VS Code でこの機能を有効にするには、 デバッグアダプタが持つ `supportsCompletionsRequest` 機能に `true` を設定する必要があります。
+* **IntelliSense Support for the Debug Console**: デバッグアダプタは、**Debug Console** で IntelliSense によるサジェスチョンを提供するために、`completions` リクエストを実装することができます。VS Code でこの機能を有効にするには、 デバッグアダプタが持つ `supportsCompletionsRequest` 機能に `true` を設定する必要があります。
 
-* **Run in Terminal Request**: デバッグアダプタは `runInTerminal` リクエスト経由で、簡単に VS Code の統合ターミナル上にてデバッグターゲットを実行することができます。(これは、VS Code のデバッグアダプタから最初のリクエストとして呼び出されることで利用できます) **Integrated Terminal** は、**Debug Console** の代替となり、対話型端末からの読み取りおよび/またはそれらが実行されている端末上で、出力を制御する必要があるコマンドラインアプリケーションのより良い開発をサポートします。 `runInTerminal` が呼び出される前に、 `initialize` リクエストが `supportsRunInTerminalRequest` アトリビュートとその値が `true` であることをフロントエンドクライアントサポートが検証します。
+* **Run in Terminal Request**: デバッグアダプタは `runInTerminal` リクエスト経由で、簡単に VS Code の統合ターミナル上にてデバッグターゲットを実行することができます。(これは、VS Code のデバッグアダプタから最初のリクエストとして呼び出されることで利用できます) **Integrated Terminal** は、**Debug Console** の代替となり、対話型端末からの読み取りおよび/またはそれらが実行されている端末上で、出力を制御する必要があるコマンドラインアプリケーションのより良い開発をサポートします。フロントエンドクライアントは、`runInTerminal` が呼び出される前に、 `initialize` リクエストに含まれる `supportsRunInTerminalRequest` アトリビュートとその値が `true` であることを検証することでサポートします。
 
-初期化要求に渡された引数は、その値がtrueであることをsupportsRunInTerminalRequest属性を持っているとことを確認することによって、それをサポートしています。
 ## Engineering
 
-Originally started with [PR #9791](https://github.com/Microsoft/vscode/pull/9791) from [Manoj Patel (@nojvek)](https://github.com/nojvek), we now have [test coverage](https://coveralls.io/github/Microsoft/vscode?branch=master) for our TypeScript files updated on each build.
+もともとは [Manoj Patel (@nojvek)](https://github.com/nojvek) からの [PR #9791](https://github.com/Microsoft/vscode/pull/9791) が発端となり、ビルド毎に更新された TypeScript ファイルの[テストカバレッジ](https://coveralls.io/github/Microsoft/vscode?branch=master)を持つようにしました。
 
 ## Notable Changes
 
@@ -375,23 +409,22 @@ Originally started with [PR #9791](https://github.com/Microsoft/vscode/pull/9791
 
 ## Monaco Editor 0.6.0
 
-We will create monthly releases of the "Monaco" Editor, in the same rhythm with VS Code. You can see the change log [here](https://github.com/Microsoft/monaco-editor/blob/master/CHANGELOG.md).
-VS Code と同様の間隔で、"Monaco" エディタを毎月リリースします。change log は [こちら](https://github.com/Microsoft/monaco-editor/blob/master/CHANGELOG.md)で参照することができます。
+VS Code と同様の間隔で、"Monaco" エディタを毎月リリースします。変更履歴は [こちら](https://github.com/Microsoft/monaco-editor/blob/master/CHANGELOG.md)で参照することができます。
 
 ## Downloads
 
 * [Windows](https://vscode-update.azurewebsites.net/1.5.0/win32/stable)
-* [OS X](https://vscode-update.azurewebsites.net/1.5.0/darwin/stable)
-* Linux 64-bit [.zip](https://vscode-update.azurewebsites.net/1.5.0/linux-x64/stable)
+* [Mac](https://vscode-update.azurewebsites.net/1.5.0/darwin/stable)
+* Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.0/linux-x64/stable)
   [.deb](https://vscode-update.azurewebsites.net/1.5.0/linux-deb-x64/stable)
   [.rpm](https://vscode-update.azurewebsites.net/1.5.0/linux-rpm-x64/stable)
-* Linux 32-bit [.zip](https://vscode-update.azurewebsites.net/1.5.0/linux-ia32/stable)
+* Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.5.0/linux-ia32/stable)
   [.deb](https://vscode-update.azurewebsites.net/1.5.0/linux-deb-ia32/stable)
   [.rpm](https://vscode-update.azurewebsites.net/1.5.0/linux-rpm-ia32/stable)
 
 ## Thank You
 
-最後になりましたが、VS Code をより良いものにするために協力してくれた下記の方々に多大なる感謝を込めて：
+最後になりましたが、VS Code をより良いものにするために協力してくれた次の方々に多大なる感謝を込めて：
 
 * [Karsten Thoms (@kthoms)](https://github.com/kthoms):
   * Typo: Header File Name -> Header Field Name [PR language-server-protocol#43](https://github.com/Microsoft/language-server-protocol/pull/43)
@@ -437,3 +470,7 @@ VS Code と同様の間隔で、"Monaco" エディタを毎月リリースしま
 * [Grant Mathews (@johnfn)](https://github.com/johnfn): Fix flipping axes behavior [PR #10322](https://github.com/Microsoft/vscode/pull/10322)
 * [Pavel Kolev (@paveldk)](https://github.com/paveldk): Fix sending message to terminated worker [PR #10833](https://github.com/Microsoft/vscode/pull/10833)
 * [Jun Han (@formulahendry)](https://github.com/formulahendry): Run entire text in terminal if selection is empty [PR #9480](https://github.com/Microsoft/vscode/pull/9480)
+
+<!-- In-product release notes styles.  Do not modify without also modifying regex in gulpfile.common.js -->
+<a id="scroll-to-top" role="button" aria-label="scroll to top" href="#"><span class="icon"></span></a>
+<link rel="stylesheet" type="text/css" href="css/inproduct_releasenotes.css"/>
