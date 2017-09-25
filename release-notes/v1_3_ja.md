@@ -1,73 +1,34 @@
-- [June 2016 (version 1.3)](#june-2016-version-13)
-	- [Tabs](#tabs)
-		- [Open Editors View](#open-editors-view)
-		- [More on Editor Stacks](#more-on-editor-stacks)
-	- [Extensions Management](#extensions-management)
-	- [Workbench](#workbench)
-		- [Problems panel](#problems-panel)
-		- [More powerful Drag and Drop](#more-powerful-drag-and-drop)
-			- [DROP TO SPLIT](#drop-to-split)
-				- [DROP FEEDBACK](#drop-feedback)
-				- [DRAG FROM EXPLORER AND OPENED EDITORS VIEW](#drag-from-explorer-and-opened-editors-view)
-		- [Preview Editors](#preview-editors)
-		- [Integrated Terminal](#integrated-terminal)
-		- [Command Palette: File: Open Recent in new Window](#command-palette-file-open-recent-in-new-window)
-		- [Restore Full screen](#restore-full-screen)
-	- [Editor](#editor)
-		- [Global Search and Replace](#global-search-and-replace)
-		- [Indent Guides](#indent-guides)
-		- [Suggestions for command identifiers](#suggestions-for-command-identifiers)
-		- [Editor Font Zooming with mouse wheel](#editor-font-zooming-with-mouse-wheel)
-		- [Multiline Find](#multiline-find)
-		- [Emmet](#emmet)
-	- [Languages](#languages)
-		- [Extract CSS/LESS/SCSS and JSON into extensions](#extract-csslessscss-and-json-into-extensions)
-		- [Extract Markdown into an extension](#extract-markdown-into-an-extension)
-		- [Atom JavaScript grammar](#atom-javascript-grammar)
-	- [Debugging](#debugging)
-		- [Moveable Debug Toolbar](#moveable-debug-toolbar)
-		- [Changing Variable Value](#changing-variable-value)
-		- [Show Variable Type on Hover](#show-variable-type-on-hover)
-		- [Step Back](#step-back)
-		- [OS specific launch configurations](#os-specific-launch-configurations)
-	- [Node.js Debugging](#nodejs-debugging)
-		- [Attach to Process](#attach-to-process)
-	- [Extension Authoring](#extension-authoring)
-		- [Menu Items and Context Menu Entries](#menu-items-and-context-menu-entries)
-		- [Add decorations before and after text](#add-decorations-before-and-after-text)
-		- [API tweaks](#api-tweaks)
-		- [Debug Extension Authoring: Command Variables](#debug-extension-authoring-command-variables)
-		- [Debug Extension Authoring: Additions to the Debug Protocol](#debug-extension-authoring-additions-to-the-debug-protocol)
-		- [Creating Errors/Warnings from an Extension (Diagnostics) ... (訳がだいぶあやしい)](#creating-errorswarnings-from-an-extension-diagnostics-訳)
-	- [Monaco Editor](#monaco-editor)
-		- [CSS/LESS/SCSS and JSON language services are now available](#csslessscss-and-json-language-services-are-now-available)
-	- [Notable Bug Fixes](#notable-bug-fixes)
-	- [Downloads](#downloads)
-	- [Thank You](#thank-you)
-
-<!-- /TOC -->
-
-https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/June_2016.md
+---
+Order: 13
+TOCTitle: June 2016
+PageTitle: Visual Studio Code June 2016 1.3
+MetaDescription: See what is new in the Visual Studio Code June 2016 Release (1.3)
+MetaSocialImage: June_2016_social.jpg
+---
 
 # June 2016 (version 1.3)
 
- VS Code の 6 月版をリリースできることに興奮しています
- エクステンション管理(エクステンション専用のビュー)にタブ機能 (タブ付きエディタペイン) など、いくつかの大きな変更を追加しました
- その他の新機能として、グローバルな検索と置換、改良されたドラッグ＆ドロップ、任意のインデントガイドなどが追加されています
- ターミナル機能など既存機能の強化や重要なバグ修正のセットも適用されています
+## 1.3.1 Recovery build
 
- このリリースのハイライト:
+To fix several issues, we're releasing a 1.3.1 recovery build. You can view the resolved issues [here](https://github.com/Microsoft/vscode/milestone/24?closed=1).
 
-* **タブ機能**：タブ付きエディタペインにより、すぐにファイルに移動したりワークベンチを整理することが可能になります
-* **エクステンション**：エクステンションを検索、インストールおよび管理するための新しいエクステンション・ビューを追加
-* **ワークベンチ**：強化されたls
-ドラッグアンドドロップ、無駄なエディタを開くことなくファイルを参照可能なプレビューエディタやマルチプル・ターミナルをサポート
-* **エディタ**：グローバル検索と置換、インデントガイド、エラーと警告を表示する `Problems Panel` を追加
+Downloads: [Windows](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/VSCodeSetup-stable.exe) |
+[OS X](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/VSCode-darwin-stable.zip) | Linux 64-bit [.zip](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/VSCode-linux-x64-stable.zip) [.deb](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/code_1.3.1-1468329898_amd64.deb) [.rpm](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/code-1.3.1-1468329898.el7.x86_64.rpm) | Linux 32-bit [.zip](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/VSCode-linux-ia32-stable.zip) [.deb](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/code_1.3.1-1468330706_i386.deb) [.rpm](https://az764295.vo.msecnd.net/stable/e6b4afa53e9c0f54edef1673de9001e9f0f547ae/code-1.3.1-1468330706.el7.i386.rpm)
+
+## June Release Summary
+
+VS Code の 6 月版をリリースできることに興奮しています。エクステンション管理(エクステンション専用のビュー)にタブ機能(タブ付きエディタペイン)など、いくつかの大きな変更を追加しました。
+その他の新機能として、グローバルな検索と置換、改良されたドラッグ＆ドロップ、任意のインデントガイドなどが追加されています。ターミナル機能など既存機能の強化や重要なバグ修正のセットも適用されています。
+
+このリリースのハイライト:
+
+* **タブ機能**: タブ付きエディタペインにより、すぐにファイルに移動したりワークベンチを整理することが可能になります
+* **エクステンション**: エクステンションを検索、インストールおよび管理するための新しいエクステンション・ビューを追加
+* **ワークベンチ**: 強化されたドラッグアンドドロップ、無駄なエディタを開くことなくファイルを参照可能なプレビューエディタやマルチプル・ターミナルをサポート
+* **エディタ**: グローバル検索と置換、インデントガイド、エラーと警告を表示する `Problems Panel` を追加
 * **言語サポート**: より良く完全な Emmet サポート、Atom JavaScript grammar エクステンションなど
-* **デバッグ**：実行中の Node.js プロセスへのアタッチやデバッグセッション中の変数の値を変更可能など多くの改善やサポートが含まれます
-* **エクステンション・オーサリング**：メニューバーとコンテキストメニューの為の新しい contribution point を追加。非テキストリソースのオープンやエディタのデコレータを追加することが可能な新しい API を提供します
-
-6 月版の新機能の詳細は下記になります。
+* **デバッグ**: 実行中の Node.js プロセスへのアタッチやデバッグセッション中の変数の値を変更可能など多くの改善やサポートが含まれます
+* **エクステンション・オーサリング**: メニューバーとコンテキストメニューの為の新しい contribution point を追加。非テキストリソースのオープンやエディタのデコレータを追加することが可能な新しい API を提供します
 
 ## Tabs
 
@@ -95,12 +56,12 @@ https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/June_2016.md
 
 **OPEN EDITORS** ビューは、Editor Stacks を視覚的に表現するもので:
 
- * 各エディタのグループとそれに属しているエディタが表示されています
- * エディタをクリックすることでアクティブにし、対応するグループでファイルを開きます
- * トップレベルのアクションとして、すべてを閉じたり、開いているすべてのエディタを保存することができます
- * エディタレベルのアクションでは、エディタを閉じたり保存することができます
- * コンテキストメニューのアクションは、より洗練されたアクションを提供します
- * エクスプローラからエディタ、または、エディタグループへドラッグアンドドロップすることが可能です
+* 各エディタのグループとそれに属しているエディタが表示されています
+* エディタをクリックすることでアクティブにし、対応するグループでファイルを開きます
+* トップレベルのアクションとして、すべてを閉じたり、開いているすべてのエディタを保存することができます
+* エディタレベルのアクションでは、エディタを閉じたり保存することができます
+* コンテキストメニューのアクションは、より洗練されたアクションを提供します
+* エクスプローラからエディタ、または、エディタグループへドラッグアンドドロップすることが可能です
 
  また、`"explorer.openEditors.visible": 0` を設定することにより、**OPEN EDITORS** ビューを隠すこともできます。
 
@@ -112,7 +73,7 @@ https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/June_2016.md
 ワークベンチでタブを有効にするための準備として、ユーザーが VS Code のエディタと触れあう方法をもう一度考え直してみました。
 他のエディタやツールを使っていた多くのユーザーは、VS Code のエディタ（開いているファイル）における動作の一部で混乱していました。
 
-例えば：
+例えば: 
 
 * dirty editor(エディタ上の未保存のファイルなど)を閉じる際、保存を要求されない
 * エディタを閉じる事は、すでに開いているエディタなどを考慮することなくグループ全体を閉じていた
@@ -137,7 +98,6 @@ https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/June_2016.md
 >**Note:** 
 **Editor Stacks** による大きな概念の変更により、多くのコマンド ID の名前が変更されたり新しいコマンドが導入されています。
 この機能による変更点などは、[Issue #6605](https://github.com/Microsoft/vscode/issues/6605) を参照してください。変更前の動作にキーバインドを変更する方法についてもガイダンスを提供しています。
-
 
 ## Extensions Management
 
@@ -232,7 +192,7 @@ https://github.com/Microsoft/vscode-docs/blob/vnext/release-notes/June_2016.md
 
 ![Preview Editor](https://code.visualstudio.com/images/June_2016_preview_editor.png)
 
-**Preview Editors** の動作を制御するために、新しい設定を導入しました：
+**Preview Editors** の動作を制御するために、新しい設定を導入しました: 
 
 * `workbench.editor.enablePreview` は、**Preview Editors** をグローバルに有効または無効にします
 * `workbench.editor.enablePreviewFromQuickOpen` クイックオープンからファイルを開いたときに、**Preview Editors** で開くことを有効または無効にします
@@ -307,7 +267,7 @@ VS Code 1.2.0 で導入された統合ターミナル機能は、このリリー
 * **編集** | **Replace in Files** メニュー、または、`Ctrl+Shift+H (Windows, Linux)` または `⇧⌘H (Mac)` を使う
 * **コマンドパレット** から **Replace in Files** コマンドを実行する
 
->**注：** 表示可能な検索結果の最大値は 2048 までという制限があり、置換についても同様の制限が適用されます
+>**注: ** 表示可能な検索結果の最大値は 2048 までという制限があり、置換についても同様の制限が適用されます
 
 ### Indent Guides
 
@@ -473,7 +433,7 @@ Markdown 言語のリソースである場合のスニペットは、上記の�
 デコレーション前後に 'attachments' を追加できます。
 'attachments' は、アイコンだけでなく、装飾されたテキストの内容とすることができます。
 
-下記の例は、テキストの color value に適用される CSS カラーデコレータです：
+下記の例は、テキストの color value に適用される CSS カラーデコレータです: 
 
 ![Decorator attachment](https://code.visualstudio.com/images/June_2016_color_decorators.png)
 
@@ -481,7 +441,7 @@ Markdown 言語のリソースである場合のスニペットは、上記の�
 
 ### API tweaks
 
-* Uri-class は、既存のものから URI を生成させることができます： `someUri.with({scheme: 'newScheme', path: 'newPath'})`
+* Uri-class は、既存のものから URI を生成させることができます:  `someUri.with({scheme: 'newScheme', path: 'newPath'})`
 * `previewHTML` コマンドは、`title` を提供することが可能になりました
 * HTML をプレビューする場合、現在適用されているテーマの body 要素のクラス名を利用しスタイルを適用します。テーマは、`vscode-light`, `vscode-dark`, and `vscode-high-contrast` など
 * 画像などのような非テキストリソースを開くことができる新しいコマンド `vscode.open` を提供します
@@ -501,13 +461,13 @@ Markdown 言語のリソースである場合のスニペットは、上記の�
 ここでは、変数 `${command.PickProcess}` がプロセスピッカーコマンドにバインドされています。
 新しい 'Attach to Process' launch configuration では、ユーザーは Node.js のプロセスを選択できるように変数を使用して launch configuration を実行してます。
 
-新しいコマンド変数の導入は簡単です：
+新しいコマンド変数の導入は簡単です: 
 
 * あなたのエクステンションにコマンドを実装および登録します。(デバッグアダプタ内ではない)
 * `debuggers` contribution point に `variables` セクションを追加します
 * 変数ごと一つの名前または command-binding を追加します
 
-例えば：
+例えば: 
 
 ```
   "debuggers": {
@@ -542,7 +502,7 @@ Markdown 言語のリソースである場合のスニペットは、上記の�
 この変更により、linter のような診断を生成する拡張機能は、ドキュメントが閉じているときにそれらをクリアする責任があります。
 診断を生成するすべてのエクステンションプロバイダは、この変更を採用する必要があります。
 
-linter で `vscode-language-server` node module を使用することで下記のように実現できます：
+linter で `vscode-language-server` node module を使用することで下記のように実現できます: 
 
 ```typescript
  documents.onDidClose((event) => {
@@ -578,7 +538,7 @@ Sass を利用するために任意のリンターの設定をカスタマイズ
 * [8173](https://github.com/Microsoft/vscode/issues/8173): Noticeable delay opening a Markdown file (source)
   * the implementation of a 10x faster hand-written plist parser for TextMate grammars improves the start-up time of all colorizers. We are looking into extracting this implementation to its own node module.
 
-また、Integrated Terminal では以下のバグが修正されました：
+また、Integrated Terminal では以下のバグが修正されました:
 
 * [#8141](https://github.com/Microsoft/vscode/issues/8141): Cannot launch Electron apps from integrated terminal
 * [#7911](https://github.com/Microsoft/vscode/issues/7911): Terminal lines appears to have margin
@@ -589,7 +549,7 @@ Sass を利用するために任意のリンターの設定をカスタマイズ
 * [#7357](https://github.com/Microsoft/vscode/issues/7357): Invoking the terminal sometimes yields an error "Cannot set property 'innerHTML' of undefined"
 * [#6457](https://github.com/Microsoft/vscode/issues/6457): vim overrides the terminal color scheme
 
-[クローズされたバグ一覧](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+label%3Abug+milestone%3A%22June+2016%22+is%3Aclosed)と、1.3アップデートにて[クローズされた機能のリクエスト一覧](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+milestone%3A%22June+2016%22+is%3Aclosed+label%3Afeature-request)です。
+[クローズされたバグ一覧](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+label%3Abug+milestone%3A%22June+2016%22+is%3Aclosed)と、1.3 アップデートにて[クローズされた機能のリクエスト一覧](https://github.com/Microsoft/vscode/issues?q=is%3Aissue+milestone%3A%22June+2016%22+is%3Aclosed+label%3Afeature-request)です。
 
 ## Downloads
 
@@ -598,8 +558,8 @@ Downloads: [Windows](https://az764295.vo.msecnd.net/stable/e724f269ded347b49fcf1
 
 ## Thank You
 
+最後になりましたが、VS Code をより良いものにするために協力してくれた下記の方々に多大なる感謝を込めて:
 
-最後になりましたが、VS Code をより良いものにするために協力してくれた下記の方々に多大なる感謝を込めて：
 * [Denis Malinochkin (@mrmlnc)](https://github.com/mrmlnc): Emmet - support all the features [PR #7926](https://github.com/Microsoft/vscode/pull/7926), [PR #8155](https://github.com/Microsoft/vscode/pull/8155), [PR #8489](https://github.com/Microsoft/vscode/pull/8489)
 * [Rob Lourens (roblourens)](https://github.com/roblourens): UI support for TimeTravel Debugging [PR #7734](https://github.com/Microsoft/vscode/pull/7734)
 * [xzper (f111fei)](https://github.com/f111fei): Debug: Fix setConfiguration error when name is null or undefined  [PR #7636](https://github.com/Microsoft/vscode/pull/7636)
