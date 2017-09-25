@@ -1,6 +1,22 @@
+---
+Order: 16
+TOCTitle: September 2016
+PageTitle: Visual Studio Code September 2016 1.6
+MetaDescription: See what is new in the Visual Studio Code September 2016 Release (1.6)
+MetaSocialImage: 1_6_release-highlights.png
+---
+
 # September 2016 (version 1.6)
 
-Visual Studio Code 9月リリース版へようこそ。このリリースではいくつかの重要な更新があり、ハイライトは次のとおりです:
+## 1.6.1 Recovery Build
+
+残されていた 1.6 の翻訳を追加し、いくつかの重要な[問題](https://github.com/Microsoft/vscode/milestone/31?closed=1)を修正した 1.6.1 リカバリビルドをリリースしました:
+
+Downloads: [Windows](https://vscode-update.azurewebsites.net/1.6.1/win32/stable) | [Mac](https://vscode-update.azurewebsites.net/1.6.1/darwin/stable) | Linux 64-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.6.1/linux-x64/stable) [.deb](https://vscode-update.azurewebsites.net/1.6.1/linux-deb-x64/stable) [.rpm](https://vscode-update.azurewebsites.net/1.6.1/linux-rpm-x64/stable) | Linux 32-bit: [.tar.gz](https://vscode-update.azurewebsites.net/1.6.1/linux-ia32/stable) [.deb](https://vscode-update.azurewebsites.net/1.6.1/linux-deb-ia32/stable) [.rpm](https://vscode-update.azurewebsites.net/1.6.1/linux-rpm-ia32/stable)
+
+## September Release Summary
+
+Visual Studio Code 9 月リリース版へようこそ。このリリースではいくつかの重要な更新があり、ハイライトは次のとおりです:
 
 * **[TypeScript 2.0](#typescript-20)** - [JavaScript](#javascript) と [TypeScript](#typescript) だけでなく、[拡張機能のオーサリング](#extension-authoring) に関連する改善
 * **[Format on Save](#format-on-save)**  - 保存時にフォーマッタを実行する機能を追加
