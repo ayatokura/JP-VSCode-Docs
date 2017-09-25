@@ -1,7 +1,13 @@
 {
+    "contents": [
+        { "label": "Japanese", "description": "", "detail": "Japanese Translated Release Notes" },
+        { "label": "English", "description": "Original Release Notes" },
+        { "label": "VS Code Tips and Tricks", "description": "", "detail": "Collection of helpful tips and tricks for VS Code." },
+        { "label": "Awesome VS Code", "description": "", "detail": "A curated list of delightful VS Code packages and resources." }
+    ],
     "version": [
-        {"label": "1.16", "description": "Untranslated", "detail": "Visual Studio Code 1.16"},
-        {"label": "1.15", "description": "Untranslated", "detail": "Visual Studio Code 1.15"},
+        {"label": "1.16", "description": "", "detail": "Visual Studio Code 1.16"},
+        {"label": "1.15", "description": "", "detail": "Visual Studio Code 1.15"},
         {"label": "1.14", "description": "", "detail": "Visual Studio Code 1.14"},
         {"label": "1.13", "description": "", "detail": "Visual Studio Code 1.13"},
         {"label": "1.12", "description": "", "detail": "Visual Studio Code 1.12"},
@@ -25,6 +31,6 @@
         {"label": "0_8_0", "description": "Untranslated", "detail": "Visual Studio Code 0.8.0"},    
         {"label": "0_7_0", "description": "Untranslated", "detail": "Visual Studio Code 0.7.0"},    
         {"label": "0_5_0", "description": "Untranslated", "detail": "Visual Studio Code 0.5.0"},    
-        {"label": "0_3_0", "description": "Untranslated", "detail": "Visual Studio Code 0.3.0"}
+        {"label": "0_3_0", "description": "", "detail": "Visual Studio Code 0.3.0"}
     ]
 }
