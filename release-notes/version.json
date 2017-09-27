@@ -1,13 +1,14 @@
 {
     "contents": [
-        { "label": "Japanese", "description": "", "detail": "Japanese Translated Release Notes" },
+        { "label": "🇯🇵 Japanese", "description": "", "detail": "Japanese Translated Release Notes" },
         { "label": "English", "description": "Original Release Notes" },
+        { "label": "How to Contribute", "description": "", "detail": "Many ways to contribute to the VS Code project" },
         { "label": "VS Code Tips and Tricks", "description": "", "detail": "Collection of helpful tips and tricks for VS Code." },
         { "label": "Awesome VS Code", "description": "", "detail": "A curated list of delightful VS Code packages and resources." }
     ],
     "version": [
-        {"label": "1.17", "description": "Untranslated", "detail": "Visual Studio Code 1.17"},        
-        {"label": "1.16", "description": "", "detail": "Visual Studio Code 1.16"},
+        {"label": "1.17", "description": "Insiders Untranslated", "detail": "Visual Studio Code 1.17"},        
+        {"label": "1.16", "description": "New!", "detail": "Visual Studio Code 1.16"},
         {"label": "1.15", "description": "", "detail": "Visual Studio Code 1.15"},
         {"label": "1.14", "description": "", "detail": "Visual Studio Code 1.14"},
         {"label": "1.13", "description": "", "detail": "Visual Studio Code 1.13"},
@@ -28,10 +29,10 @@
         {"label": "January", "description": "Untranslated", "detail": "Visual Studio Code 0.10.9"},
         {"label": "December", "description": "Untranslated", "detail": "Visual Studio Code 0.10.6"},
         {"label": "November", "description": "Untranslated", "detail": "Visual Studio Code 0.10.3"},
-        {"label": "0_9_0", "description": "Untranslated", "detail": "Visual Studio Code 0.9.0"},    
-        {"label": "0_8_0", "description": "Untranslated", "detail": "Visual Studio Code 0.8.0"},    
-        {"label": "0_7_0", "description": "Untranslated", "detail": "Visual Studio Code 0.7.0"},    
-        {"label": "0_5_0", "description": "Untranslated", "detail": "Visual Studio Code 0.5.0"},    
-        {"label": "0_3_0", "description": "", "detail": "Visual Studio Code 0.3.0"}
+        {"label": "0.9.0", "description": "Untranslated", "detail": "Visual Studio Code 0.9.0"},    
+        {"label": "0.8.0", "description": "Untranslated", "detail": "Visual Studio Code 0.8.0"},    
+        {"label": "0.7.0", "description": "Untranslated", "detail": "Visual Studio Code 0.7.0"},    
+        {"label": "0.5.0", "description": "Untranslated", "detail": "Visual Studio Code 0.5.0"},    
+        {"label": "0.3.0", "description": "", "detail": "Visual Studio Code 0.3.0"}
     ]
 }
