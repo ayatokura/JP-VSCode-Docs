@@ -7,8 +7,9 @@
         { "label": "Awesome VS Code", "description": "", "detail": "A curated list of delightful VS Code packages and resources." }
     ],
     "version": [
-        {"label": "1.18", "description": "Insiders Untranslated", "detail": "Visual Studio Code 1.18"}, 
-        {"label": "1.17", "description": "New! Untranslated", "detail": "Visual Studio Code 1.17"},        
+        {"label": "1.19", "description": "Insiders Untranslated", "detail": "Visual Studio Code 1.19"},
+        {"label": "1.18", "description": "New! Untranslated", "detail": "Visual Studio Code 1.18"}, 
+        {"label": "1.17", "description": "Untranslated", "detail": "Visual Studio Code 1.17"},        
         {"label": "1.16", "description": "", "detail": "Visual Studio Code 1.16"},
         {"label": "1.15", "description": "", "detail": "Visual Studio Code 1.15"},
         {"label": "1.14", "description": "", "detail": "Visual Studio Code 1.14"},
